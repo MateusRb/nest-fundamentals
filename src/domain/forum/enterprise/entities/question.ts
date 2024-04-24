@@ -1,11 +1,11 @@
 import dayjs from 'dayjs'
 
-import { Slug } from './value-objects/slug'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { Optional } from '@/core/types/optional'
 import { AggregateRoot } from '@/core/entities/aggregate-root'
 import { QuestionAttachmentList } from '@/domain/forum/enterprise/entities/question-attachment-list'
 import { QuestionBestAnswerChosenEvent } from '@/domain/forum/enterprise/events/question-best-answer-chosen-event'
+import { Slug } from '@/domain/forum/enterprise/entities/value-objects/slug'
 
 export interface QuestionProps {
   authorId: UniqueEntityID

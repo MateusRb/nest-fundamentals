@@ -1,10 +1,6 @@
 import { OnAnswerCreated } from '@/domain/notification/application/subscribers/on-answer-created'
 import { makeAnswer } from 'test/factories/make-answer'
-import {
-  SendNotificationUseCase,
-  SendNotificationUseCaseRequest,
-  SendNotificationUseCaseResponse,
-} from '../use-cases/send-notification'
+
 import { makeQuestion } from 'test/factories/make-question'
 import { MockInstance } from 'vitest'
 import { waitFor } from 'test/utils/wait-for'
@@ -13,6 +9,11 @@ import { InMemoryAnswersRepository } from 'test/repository/in-memory-answers-rep
 import { InMemoryNotificationsRepository } from 'test/repository/in-memory-notifications-repository'
 import { InMemoryQuestionAttachmentsRepository } from 'test/repository/in-memory-question-attachment-repository'
 import { InMemoryQuestionsRepository } from 'test/repository/in-memory-questions-repository'
+import {
+  SendNotificationUseCase,
+  SendNotificationUseCaseRequest,
+  SendNotificationUseCaseResponse,
+} from '@/domain/notification/application/use-cases/send-notification'
 
 let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentsRepository
 let inMemoryQuestionsRepository: InMemoryQuestionsRepository
