@@ -20,7 +20,7 @@ export class PrismaAnswerCommentMapper {
     )
   }
 
-  static toPrisma(
+  static toModel(
     answerComment: AnswerComment,
   ): Prisma.CommentUncheckedCreateInput {
     return {
