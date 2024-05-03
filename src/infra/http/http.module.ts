@@ -10,6 +10,7 @@ import { DeleteQuestionUseCase } from '@/domain/forum/application/use-cases/dele
 import { DeleteQuestionCommentUseCase } from '@/domain/forum/application/use-cases/delete-question-comment'
 import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-answer'
 import { EditQuestionUseCase } from '@/domain/forum/application/use-cases/edit-question'
+import { FetchAnswerCommentsUseCase } from '@/domain/forum/application/use-cases/fetch-answer-comments'
 import { FetchQuestionAnswersUseCase } from '@/domain/forum/application/use-cases/fetch-question-answers'
 import { FetchQuestionAnswersController } from '@/domain/forum/application/use-cases/fetch-question-answers.controller'
 import { FetchQuestionCommentsUseCase } from '@/domain/forum/application/use-cases/fetch-question-comments'
@@ -34,6 +35,7 @@ import { EditQuestionController } from '@/infra/http/controllers/edit-question.c
 import { FetchQuestionCommentsController } from '@/infra/http/controllers/fetch-question-comments.controller'
 import { FetchRecentQuestionsController } from '@/infra/http/controllers/fetch-recent-questions.controller'
 import { GetQuestionBySlugController } from '@/infra/http/controllers/get-question-by-slug.controller'
+import { FetchAnswerCommentsController } from '@/infra/http/controllers/src/infra/http/controllers/fetch-answer-comments.controller'
 import { Module } from '@nestjs/common'
 
 @Module({
@@ -56,6 +58,7 @@ import { Module } from '@nestjs/common'
     CommentOnAnswerController,
     DeleteAnswerCommentController,
     FetchQuestionCommentsController,
+    FetchAnswerCommentsController,
   ],
   providers: [
     CreateQuestionUseCase,
@@ -75,6 +78,7 @@ import { Module } from '@nestjs/common'
     CommentOnAnswerUseCase,
     DeleteAnswerCommentUseCase,
     FetchQuestionCommentsUseCase,
+    FetchAnswerCommentsUseCase,
   ],
 })
 export class HttpModule {}
